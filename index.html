@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>画卷设计</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="options">
+            <label for="blessing">祝福语：</label>
+            <textarea id="blessing" maxlength="50" placeholder="输入祝福语"></textarea>
+            <label for="blessing-font">字体：</label>
+            <select id="blessing-font">
+                <option value="Arial">Arial</option>
+                <option value="KaiTi">楷体</option>
+                <option value="SimSun">宋体</option>
+            </select>
+            <label for="blessing-size">大小：</label>
+            <select id="blessing-size">
+                <option value="16">16px</option>
+                <option value="18">18px</option>
+                <option value="20">20px</option>
+            </select>
+            <button id="clear-blessing">清空祝福语</button>
+            <label for="seal-1">电子章1：</label>
+            <input type="text" id="seal-1" maxlength="4" placeholder="输入电子章1">
+            <label for="seal-2">电子章2：</label>
+            <input type="text" id="seal-2" maxlength="4" placeholder="输入电子章2（可选）">
+            <label for="seal-shape">章形状：</label>
+            <select id="seal-shape">
+                <option value="circle">圆形</option>
+                <option value="square">方形</option>
+            </select>
+            <button id="clear-seal">清空电子章</button>
+            <label for="bg-pattern">背景图案：</label>
+            <select id="bg-pattern">
+                <option value="pattern1">图案1</option>
+                <option value="pattern2">图案2</option>
+                <option value="pattern3">图案3</option>
+            </select>
+            <button id="download">下载图片</button>
+        </div>
+        <div class="scroll" id="scroll">
+            <div class="scroll-content">
+                <div class="blessing-output" id="blessing-output"></div>
+                <div class="seal-container" id="seal-container"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
